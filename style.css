@@ -1,0 +1,82 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFC568;
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 50rem;
+  height: 20rem;
+  position: relative;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.mo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.line {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.lttr {
+  fill: #763C8C;
+  transition: opacity 0.15s ease-out;
+}
+
+.sound {
+  position: fixed;
+  color: #763C8C;
+  font-size: 1.6rem;
+  bottom: 2rem;
+  right: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  font-weight: bold;
+}
+
+.sound--off {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    width: 90vw;
+    height: 36vw;
+  }
+}
